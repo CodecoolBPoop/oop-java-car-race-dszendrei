@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Race {
+class Race {
 
     List<Truck> trucks = new ArrayList<>();
     List<Car> cars = new ArrayList<>();
@@ -14,7 +14,7 @@ public class Race {
     // simulates the race by
     // - calling moveForAnHour() on every vehicle 50 times
     // - setting whether its raining
-    protected void simulateRace() {
+    void simulateRace() {
         for (int i = 0; i < 50; i++) {
             Weather weather = new Weather();
             isRaining = weather.isRaining();
@@ -32,7 +32,7 @@ public class Race {
     }
 
     // prints each vehicle's name, distance traveled ant type.
-    protected void printRaceResults(){
+    void printRaceResults(){
         List<Vehicle> vehicles = new ArrayList<>();
         vehicles.addAll(cars);
         vehicles.addAll(motorcycles);

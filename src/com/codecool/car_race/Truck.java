@@ -22,7 +22,7 @@ public class Truck extends Vehicle {
     private int speed;
 
     // breakdownTurnsLeft holds how long its still broken down.
-    protected int breakdownTurnsLeft = 0;
+    int breakdownTurnsLeft = 0;
 
     // setup the actual speed used for the current lap
     private void prepareForLap(Race race) {
@@ -39,7 +39,7 @@ public class Truck extends Vehicle {
     }
 
     // The vehicle travels for an hour. It increases the distance traveled. Call this from the Race::simulateRace() only!
-    protected void moveForAnHour(Race race) {
+    void moveForAnHour(Race race) {
         prepareForLap(race);
         distanceTraveled += speed;
     }

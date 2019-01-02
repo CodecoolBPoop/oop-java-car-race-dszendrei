@@ -28,7 +28,7 @@ public class Car extends Vehicle {
     }
 
     // setup the actual speed used for the current lap
-    protected void prepareForLap(Race race) {
+    private void prepareForLap(Race race) {
         if(!race.isThereABrokenTruck(race.trucks)){
             speed = normalSpeed;
         } else {
@@ -37,7 +37,7 @@ public class Car extends Vehicle {
     }
 
     // The vehicle travels for an hour. It increases the distance traveled. Call this from the Race::simulateRace() only!
-    protected void moveForAnHour(Race race) {
+    void moveForAnHour(Race race) {
         prepareForLap(race);
         distanceTraveled += speed;
     }

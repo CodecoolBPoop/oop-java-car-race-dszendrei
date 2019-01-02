@@ -36,7 +36,7 @@ public class Motorcycle extends Vehicle {
     }
 
     // The vehicle travels for an hour. It increases the distance traveled. Call this from the Race::simulateRace() only!
-    protected void moveForAnHour(Race race) {
+    void moveForAnHour(Race race) {
         prepareForLap(race);
         distanceTraveled += speed;
     }
