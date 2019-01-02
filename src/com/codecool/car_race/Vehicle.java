@@ -5,6 +5,7 @@ public class Vehicle {
         return distanceTraveled;
     }
 
+    // holds the summarized distance traveled in the race.
     int distanceTraveled = 0;
 
     public String getName() {

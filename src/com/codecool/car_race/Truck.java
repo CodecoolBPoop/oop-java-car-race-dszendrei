@@ -1,6 +1,7 @@
 package com.codecool.car_race;
 
 public class Truck extends Vehicle {
+
     // Truck drivers are boring. They call all their trucks a random number between 0 and 1000.
     Truck () {
         String name = String.valueOf((int) (Math.random()*1000));
@@ -22,9 +23,6 @@ public class Truck extends Vehicle {
 
     // breakdownTurnsLeft holds how long its still broken down.
     protected int breakdownTurnsLeft = 0;
-
-    // distanceTraveled holds the summarized distance traveled in the race.
-    //distanceTraveled = 0;
 
     // setup the actual speed used for the current lap
     private void prepareForLap(Race race) {

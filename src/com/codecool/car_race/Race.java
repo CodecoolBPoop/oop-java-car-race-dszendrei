@@ -1,7 +1,6 @@
 package com.codecool.car_race;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -12,6 +11,9 @@ public class Race {
     List<Motorcycle> motorcycles = new ArrayList<>();
     boolean isRaining;
 
+    // simulates the race by
+    // - calling moveForAnHour() on every vehicle 50 times
+    // - setting whether its raining
     protected void simulateRace() {
         for (int i = 0; i < 50; i++) {
             Weather weather = new Weather();
@@ -25,9 +27,7 @@ public class Race {
             for (Motorcycle motorcycle : motorcycles) {
                 motorcycle.moveForAnHour(this);
             }
-            // simulates the race by
-            // - calling moveForAnHour() on every vehicle 50 times
-            // - setting whether its raining
+
         }
     }
 

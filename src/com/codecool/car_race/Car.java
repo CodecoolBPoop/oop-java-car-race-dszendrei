@@ -26,11 +26,6 @@ public class Car extends Vehicle {
     public void setName(String name) {
         super.setName(name);
     }
-    //super.setName(name); // Make a list from the words here: http://www.fantasynamegenerators.com/car-names.php and pick 2 randomly for each instance.
-
-    //super(name)
-
-    // protected int distanceTraveled = 0; // holds the summarized distance traveled in the race.
 
     // setup the actual speed used for the current lap
     protected void prepareForLap(Race race) {
