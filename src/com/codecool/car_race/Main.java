@@ -1,12 +1,20 @@
 package com.codecool.car_race;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     /**
      * Creates all the vehicles that will be part of this race.
      */
     private static void createVehicles(Race race) {
+        for (int i = 0; i < 10; i++) {
+            race.trucks.add(new Truck());
+            race.cars.add(new Car());
+            race.motorcycles.add(new Motorcycle(i + 1));
+        }
     }
 
     /**
@@ -20,7 +28,6 @@ public class Main {
     public static void main(String[] args) {
         Race race = new Race();
         createVehicles(race);
-
         race.simulateRace();
         race.printRaceResults();
     }
